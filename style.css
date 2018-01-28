@@ -1,33 +1,108 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-5";
+  src:url("fonts/untitled-font-5.eot");
+  src:url("fonts/untitled-font-5.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-5.woff") format("woff"),
+    url("fonts/untitled-font-5.ttf") format("truetype"),
+    url("fonts/untitled-font-5.svg#untitled-font-5") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-5" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-5" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\61";
+}
+.icon-menu:before {
+  content: "\62";
+}
+.icon-about:before {
+  content: "\63";
+}
+.icon-mail:before {
+  content: "\64";
+}
+.icon-home-1:before {
+  content: "\65";
+}
+.icon-mail-1:before {
+  content: "\66";
+}
+.icon-envelope-o:before {
+  content: "\67";
+}
+.icon-skills:before {
+  content: "\68";
+}
+.icon-gallery:before {
+  content: "\69";
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	background: rgba( 45, 45, 45, 1);
 	font-family: 'Titillium Web', sans-serif;
 }
 .container {
 	margin: 0;
-	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	grid-template-rows: 100vh;
+	grid-template-areas: "navi sec";
 }
 nav {
-	width: 50px;
-	height: 100vh;
-	background: #161616;
-	position: fixed;
+	grid-area: navi;
+	background: #090905;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#main {
+	grid-area: sec;
+	background: #11110d;
+
+}
+nav ul {
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
 }
 nav ul li {
-	list-style: none;
-	color: aliceblue
-}
-li img {
-	color:white;
-}
-.liImg {
-	color: white;
-}
-
-ul {
 	padding: 10px;
+	list-style: none;
 }
-ul li {
-	padding-bottom: 20px;
+nav a {
+	text-decoration: none;
+	color: wheat;
+	font-size: 22px;
 }
