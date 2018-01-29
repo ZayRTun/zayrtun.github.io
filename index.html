@@ -4,11 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Titillium+Web" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Zayar - Web Developer / Front-End-Developer</title>
 </head>
 <body>
+<script>
+  jQuery('body').css('display', 'none');
+  jQuery(document).ready(function() {
+    jQuery('body').fadeIn();
+    jQuery('a').on('click', function(event) {
+      var thetarget = this.getAttribute('target');
+      if (thetarget != '_blank') {
+        var thehref = this.getAttribute('target');
+        event.preventDefault();
+        jQuery('body').fadeOut(function() {
+          window.location = thehref;
+        });
+      }
+    });
+  });
+  setTimeout(function() {
+    jQuery('body').fadeIn();
+  }, 1000);
+</script>
 	<div class="container">
 		<nav>
 			<ul>
@@ -20,7 +40,10 @@
 			</ul>
 		</nav>
 		<section id="main">
-			<div></div>
+      <div class="main-top">
+        
+      </div>
+      <div class="main-bottom"></div>
 		</section>
 	</div>
 </body>
