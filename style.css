@@ -9,7 +9,6 @@
     url("fonts/untitled-font-5.svg#untitled-font-5") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 
 [data-icon]:before {
@@ -65,51 +64,62 @@
 .icon-gallery:before {
   content: "\69";
 }
-
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Titillium Web', sans-serif;
 }
 .container {
-	margin: 0;
-	display: grid;
-	grid-template-columns: 55px 1fr;
-	grid-template-rows: 100vh;
-	grid-template-areas: "navi sec";
+  background: rgb(51, 241, 232);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vh 90vh;
+  grid-template-areas: 
+  "navi navi navi"
+  "sec sec sec";
 }
 nav {
-	grid-area: navi;
-  background: rgb(24, 24, 23);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-#main {
-	grid-area: sec;
-	background: #11110d;
-}
-nav > ul {
-  height: 50vh;
+  grid-area: navi;
+  width: 100%;
+  height: 10vh;
   padding: 0;
-	display: flex;
-	flex-direction: column;
+  background: rgb(22, 22, 22);
+}
+ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-nav ul li {
-	list-style: none;
+li {
+  list-style: none;
 }
-nav a {
-	text-decoration: none;
-  color: rgb(19, 152, 230);
-  font-size: 25px;
+a {
+  text-decoration: none;
+  color: rgb(51, 241, 232);
 }
-.main-top {
-  height: 50%;
-  background: rgb(63, 63, 61);
+#main {
+  grid-area: sec;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.main-bottom {
-  height: 50%;
-  background: rgb(63, 63, 61);
+.main-secs {
+  background: rgb(39, 39, 39);
+  width: 47%;
+  height: 90%;
+  color: rgb(51, 241, 232);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.main-left {
+  font-size: 1.5em;
+  font-weight: bold;
 }
