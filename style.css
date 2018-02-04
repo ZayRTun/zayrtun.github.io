@@ -116,3 +116,26 @@ section {
   font-size: 1.5em;
   font-weight: bold;
 }
+
+@media screen and (max-width: 480px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .main-secs {
+    background: rgb(39, 39, 39);
+    width: 90%;
+    height: 40vh;
+    color: rgb(51, 241, 232);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .main-left {
+    width: 90%;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 40vh;
+    box-sizing: border-box;
+  }
+}

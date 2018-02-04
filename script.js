@@ -4,8 +4,7 @@ $(function() {
     
     var target = this.hash;
     var $target = $(target);
-    console.log("target "+target);
-    console.log("$target "+$target);
+
 
     $('html, body').animate({
       'scrollTop': $target.offset().top
