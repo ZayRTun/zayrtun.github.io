@@ -108,6 +108,41 @@ section {
   justify-content: space-evenly;
   align-items: center;
 }
+.main {
+  background: rgb(39, 39, 39);
+  color: rgb(51, 241, 232);
+  height: 90%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+  "tp tas";
+}
+.mTop {
+  grid-area: tp;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 2em;
+}
+.body { padding-left: 30px; }
+.inner {
+  margin: 30px 0;
+  padding-left: 40px;
+}
+.shades {
+  font-family: 'Kalam', cursive;
+  color: rgb(73, 72, 72);
+  font-style: italic;
+  font-size: .5em;
+}
+
+
+
+
+
 .main-secs {
   background: rgb(39, 39, 39);
   width: 47%;
@@ -128,7 +163,7 @@ section {
     justify-content: space-evenly;
   }
   .main-secs {
-    background: rgb(39, 39, 39);
+    background: #272727;
     width: 90%;
     height: 40vh;
     color: rgb(51, 241, 232);
