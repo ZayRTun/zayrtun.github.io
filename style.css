@@ -114,14 +114,14 @@ section {
   height: 90%;
   width: 90%;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "tp tas";
+  "tp cen tas";
 }
 .mTop {
   grid-area: tp;
   padding: 10px;
-  box-sizing: border-box;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,14 +129,26 @@ section {
 }
 .body { padding-left: 30px; }
 .inner {
-  margin: 30px 0;
+  /* margin: 10% 0; */
   padding-left: 40px;
+  box-sizing: border-box;
 }
 .shades {
   font-family: 'Kalam', cursive;
   color: rgb(73, 72, 72);
   font-style: italic;
   font-size: .5em;
+}
+.mCenter {
+  border: 1px solid rgb(51, 241, 232);
+  grid-area: cen;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mAside {
+  grid-area: tas;
+
 }
 
 
