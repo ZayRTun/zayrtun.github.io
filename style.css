@@ -72,20 +72,14 @@ nav {
 #logo {
   width: 100%;
   background: rgb(51,241,232); 
-  border: 1px solid rgb(22,22,22);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 5px 0; */
   position: absolute;
   top: 0;
-  /* left: 0;
-  margin: 0; */
-  box-sizing: border-box;
 }
 #logo img {height: 55px; padding: 5px 0;}
-#link {width: 100%;}
-#socialLink {width: 100%; position: absolute; bottom: 0;}
+#socialLink {width: 100%; position: absolute; bottom: 0; box-sizing: border-box;}
 #link > ul {
   height: 100%;
   margin: 0;
@@ -97,29 +91,34 @@ nav {
 }
 #socialLink > ul {
   height: 100%;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-li, a {
+#link li {
   list-style: none;
   padding: 15px 0;
 }
-a {
+#link li a {
   text-decoration: none;
   font-weight: bold;
   color: rgb(102, 101, 101);
 }
+#socialLink li { padding: 5px 0; }
+#socialLink li, a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.1em;
+}
 li a:hover {
   color: rgb(51, 241, 232);
 }
-.active {
+#link .active {
   color: rgb(51, 241, 232);
 }
 .ico {
-  font-size: 1.7em;
+  font-size: 1.3em;
   font-weight: 600;
 }
 .icoS {
@@ -138,12 +137,11 @@ li a:hover {
 section {
   margin-left: 60px;
   height: 100vh;
-  
-  
-  /* display: flex;
-  justify-content: space-evenly;
-  align-items: center; */
 }
+
+  /* Global */
+
+
 .main {
   background: rgb(39, 39, 39);
   color: rgb(51, 241, 232);
@@ -156,15 +154,15 @@ section {
   justify-content: center;
 }
 .main .content {
-  margin: 1% 0 1% 9%;
-  font-size: 2.5em;
+  margin: 0 0 0 9%;
   z-index: 1;
 }
-.main .content h1 {
-  line-height: 60px;
+#Home .main .content h1 {
+  font-size: 4em;
+  line-height: 70px;
   color: #fff;
 }
-.main .content p { font-size: .4em; letter-spacing: 5px; }
+#Home .main .content p { font-size: 1em; letter-spacing: 5px; }
 .shades {
   font-family: 'Kalam', cursive;
   color: rgb(102, 101, 101);
@@ -179,10 +177,43 @@ section {
 
 .imgMain {
   position: absolute;
-  top: 150px;
-  width: 300px;
+  top: 100px;
+  width: 250px;
   left: 70%;
   margin-left: -150px;
+}
+#Home .content a {
+  margin: 0;
+  text-decoration: none;
+  letter-spacing: .5em;
+  font-size: .7em;
+  padding: 5px;
+  width: 100px; height: 20px;
+  border: 2px solid rgb(51, 242, 232);
+  color: rgb(51, 242, 232);
+  border-radius: 5px;
+}
+#Home .content a:hover {
+  color: rgb(39,39,39);
+  background: rgb(51, 241, 232);
+}
+#Home .content a,
+#Home .content a:hover,
+#Home .content a:active,
+#Home .content a:visited {
+  outline: none !important;
+}
+
+/* About Me */
+.main .content { width: 45%; padding: 20px; box-sizing: border-box; }
+.main .content h1 {
+  font-size: 4em; 
+}
+.main .content p {
+  font-size: 1em; 
+  color: #fff;
+  letter-spacing: .02em;
+  line-height: 20px;
 }
 
 
