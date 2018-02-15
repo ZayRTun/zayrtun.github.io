@@ -1,4 +1,20 @@
 $(function() {
+  // $('.scLinks').hover(function() {
+  //   var targetElem = event.currentTarget.id;
+  //   $(targetElem).html('home');
+  //   console.log(event.currentTarget.id);
+  // })
+  // $('#Home_link').hover(mIn, mOt)
+
+  // function mIn() {
+  //   $('#Home_link').html('Home');
+  // }
+  // function mOt() {
+  //   $("#Home_link").html('');
+  // }
+
+
+
 
   var scrollLink = $(".scLinks");
   
@@ -11,8 +27,8 @@ $(function() {
       scrollTop: $(this.hash).offset().top
     }, 1000, "swing", function() {
       window.location.hash = loc;
-    })
-  })
+    });
+  });
 
   $(window).scroll(function() {
     var scBarLoc = $(this).scrollTop();
@@ -23,7 +39,14 @@ $(function() {
         $(this).addClass("active");
         $(this).parent().siblings().children().removeClass("active");
       }
-    })
-  })
+    });
+  });
   
-})
+
+
+
+
+
+
+
+});

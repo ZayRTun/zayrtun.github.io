@@ -221,7 +221,9 @@ section {
 
 
 
-
+.cs {
+  color: rgb(102, 101, 101);
+}
 
 /* @media screen and (max-width: 480px) {
   section {
