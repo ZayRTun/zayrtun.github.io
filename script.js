@@ -33,7 +33,7 @@ $(function() {
   $(window).scroll(function() {
     var scBarLoc = $(this).scrollTop();
     scrollLink.each(function() {
-      var secOffSet = $(this.hash).offset().top - 20;
+      var secOffSet = $(this.hash).offset().top - 10;
 
       if (secOffSet <= scBarLoc) {
         $(this).addClass("active");

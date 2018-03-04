@@ -56,10 +56,11 @@
 }
 body {
   font-family: 'Titillium Web', sans-serif;
-  background: rgb(51, 241, 232);
+  background: rgb(39, 39, 39);
   position: relative;
   font-size: 16px;
 }
+
 nav {
   position: fixed;
   width: 60px;
@@ -78,7 +79,7 @@ nav {
   position: absolute;
   top: 0;
 }
-#logo img {height: 55px; padding: 5px 0;}
+#logo img {width: 25px; padding: 5px 0;}
 #socialLink {width: 100%; position: absolute; bottom: 0; box-sizing: border-box;}
 #link > ul {
   height: 100%;
@@ -141,12 +142,12 @@ section {
 
   /* Global */
 
+.spacer {display: none;}
 
 .main {
   background: rgb(39, 39, 39);
   color: rgb(51, 241, 232);
   position: relative;
-  left: 10;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -177,10 +178,11 @@ section {
 
 .imgMain {
   position: absolute;
-  top: 100px;
+  top: 50%;
+  margin-top: -222px;
   width: 250px;
   left: 70%;
-  margin-left: -150px;
+  margin-left: -125px;
 }
 #Home .content a {
   margin: 0;
@@ -216,40 +218,9 @@ section {
   line-height: 20px;
 }
 
-
-
-
-
-
 .cs {
   color: rgb(102, 101, 101);
 }
-
-/* @media screen and (max-width: 480px) {
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .main-secs {
-    background: #272727;
-    width: 90%;
-    height: 40vh;
-    color: rgb(51, 241, 232);
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  .main-left {
-    width: 90%;
-    font-size: 1.5em;
-    font-weight: bold;
-    height: 40vh;
-    box-sizing: border-box;
-  }
-} */
-
-
-
 
 /* FORM STYLES */
 .contact form{
@@ -289,18 +260,108 @@ section {
   transition: background-color 2s ease-out;
 }
 
-/* LARGE SCREENS */
-@media(min-width:700px){
-  .wrapper{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
 
-  .wrapper > *{
-    padding:2em;
-  }
+#projList {
+	padding-left: 20px;
+}
+#projList a {
+	color: aliceblue;
+}
+#projList a:hover {
+	color: rgb(51, 241, 232);
+}
 
-  .company-info h3, .company-info ul, .brand{
-    text-align: left;
+
+/* Responsive media queries */
+/* iPad 768px width */
+@media screen and (max-width: 768px) {
+  #Home .main .content h1 {
+    font-size: 3.5em;
   }
+  .main .content h1 {
+    font-size: 3.5em;
+  }
+  .imgMain {
+    position: absolute;
+    top: 50%;
+    margin-top: -168.5px;
+    width: 200px;
+    left: 70%;
+    margin-left: -60px;
+  }
+  .main .content {width: 80%;}
+}
+
+/* iPhone 8plus 414px width */
+@media screen and (max-width: 415px){
+  
+  nav {
+    position: fixed;
+    margin: 0;
+    left: 0; top: 0;
+    width: 100%;
+    height: 7vh;
+    z-index: 2;
+  }
+  #link {margin-left: 50px;}
+  .spacer {
+    display: block;
+     width: 100%;
+    height: 6.8vh;
+    
+  }
+  #logo > img {
+
+  }
+  #logo {
+    height: 7vh;
+    width: 50px;
+  }
+  #link > ul {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ico {
+    font-size: 1em;
+  }
+  section, .main {
+    /* margin-top: 7vh; */
+    margin-left: 0;
+    width: 100%;
+    height: 93vh;
+  }
+  #socialLink {
+    visibility: hidden;
+  }
+  .home .main .content h1 {
+    line-height: 40px;
+    font-size: 2.2em;
+    width: 100%;
+    color: #fff;
+    
+  }
+  .main .content h1 {
+    font-size: 2em;
+  }
+  .main .content>p {
+    font-size: .75em;
+    letter-spacing: .03em;
+    line-height: 15px;
+  }
+  .imgMain {
+    position: absolute;
+    top: 50%;
+    /* margin-top: -158.5px; */
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+  }
+  .main .content {width: 90%;}
+  
+ 
 }
