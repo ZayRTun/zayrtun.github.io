@@ -141,9 +141,6 @@ section {
 }
 
   /* Global */
-
-.spacer {display: none;}
-
 .main {
   background: rgb(39, 39, 39);
   color: rgb(51, 241, 232);
@@ -204,6 +201,14 @@ section {
 #Home .content a:active,
 #Home .content a:visited {
   outline: none !important;
+}
+
+.ctLink {
+  font-size: .8em;
+  padding: 5px;
+  color: rgb(51, 241, 232);
+  border: 1px solid rgb(51, 241, 232);
+  border-radius: 3px;
 }
 
 /* About Me */
@@ -306,16 +311,16 @@ section {
   #link {margin-left: 50px;}
   .spacer {
     display: block;
-     width: 100%;
+    width: 100%;
     height: 6.8vh;
     
   }
   #logo > img {
-
+    width: 22px;
   }
   #logo {
     height: 7vh;
-    width: 50px;
+    width: 44px;
   }
   #link > ul {
     /* height: 100%; */
@@ -326,8 +331,10 @@ section {
     justify-content: space-around;
     align-items: center;
   }
+  
   .ico {
     font-size: 1em;
+    /* display: none; */
   }
   section, .main {
     /* margin-top: 7vh; */
@@ -336,7 +343,7 @@ section {
     height: 93vh;
   }
   #socialLink {
-    visibility: hidden;
+    display: none;
   }
   .home .main .content h1 {
     line-height: 40px;
@@ -361,7 +368,24 @@ section {
     left: 50%;
     margin-left: -100px;
   }
-  .main .content {width: 90%;}
+  .ctLink {
+    font-size: .6em;
+    padding: 4px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+  }
   
+  .main .content {width: 90%;}
+  .bOt { position: absolute; left: 3%; top: 1%;}
+  .bOb { position: absolute; left: 3%; bottom: 1%; }
+  .bIt { position: absolute; left: 5%; top: 5%; }
+  .bIb { position: absolute; left: 5%; bottom: 5%; }
+
+  
+#projList a {
+  font-size: .65em;
+  color: rgb(51, 241, 232);
+}
  
 }
